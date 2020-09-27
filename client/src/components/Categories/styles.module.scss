@@ -1,0 +1,30 @@
+.categories {
+    display: flex;
+    flex-direction: row;
+    ul {
+        display: flex;
+        flex-direction: row;
+        li {
+            list-style: none;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: all 0.1s ease-in-out;
+            &.active {
+                background-color: #282828;
+                color: #fff;
+            }
+            &:hover {
+                background-color: #282828;
+                color: #fff;
+            }
+        }
+    }
+}
