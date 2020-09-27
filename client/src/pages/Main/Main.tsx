@@ -26,13 +26,13 @@ export const Main: React.FC = () => {
                                 <h2>Чизбургер-пицца</h2>
                                 <div className={styles.settingsPizza}>
                                     <div className={styles.dough}>
-                                        <button>тонкое</button>
-                                        <button>традиционное</button>
+                                        <button className={styles.active}>тонкое</button>
+                                        <button disabled>традиционное</button>
                                     </div>
                                     <div className={styles.size}>
-                                        <button>26 см.</button>
+                                        <button disabled>26 см.</button>
                                         <button>30 см.</button>
-                                        <button>40 см.</button>
+                                        <button className={styles.active}>40 см.</button>
                                     </div>
                                 </div>
                                 <div className={styles.price}>
