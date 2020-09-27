@@ -1,0 +1,117 @@
+.wrapper {
+    width: 100%;
+    .settings {
+        display: flex;
+        flex-direction: row;
+    }
+    .pizzas {
+        h1 {
+            margin: 20px 0;
+        }
+        .pizzasList {
+            ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                li {
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    flex: 0 1 25%;
+                    align-items: center;
+                    margin-bottom: 40px;
+                    h2 {
+                        margin-bottom: 15px;
+                    }
+                    .pizzaImg {
+                        max-width: 100%;
+                        height: auto;
+                    }
+                    .settingsPizza {
+                        width: 80%;
+                        background-color: #f3f3f3;
+                        border-radius: 10px;
+                        padding: 5px;
+                        .dough {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin-bottom: 5px;
+                            button {
+                                background: #ffffff;
+                                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+                                border-radius: 5px;
+                                border: none;
+                                width: 48%;
+                                height: 30px;
+                                font-weight: 700;
+                                font-size: 13px;
+                                cursor: pointer;
+                            }
+                        }
+                        .size {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+                            button {
+                                background: #ffffff;
+                                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+                                border-radius: 5px;
+                                border: none;
+                                width: 32%;
+                                height: 30px;
+                                font-weight: 700;
+                                font-size: 13px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .price {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 80%;
+                        margin-top: 15px;
+                        h2 {
+                            margin-bottom: 0;
+                            width: 50%;
+                        }
+                        button {
+                            border: none;
+                            background: #fff;
+                            border: 1px solid #eb5a1e;
+                            border-radius: 30px;
+                            width: 150px;
+                            height: 40px;
+                            color: #eb5a1e;
+                            font-size: 14px;
+                            font-weight: 700;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                            padding: 0 15px;
+                            cursor: pointer;
+                            span {
+                                background-color: #fe5f1e;
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 50%;
+                                color: #fff;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                            &:hover {
+                                background: #fe5f1e;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
