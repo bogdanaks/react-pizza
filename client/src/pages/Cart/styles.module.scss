@@ -1,0 +1,171 @@
+.cartWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 0;
+    .cart {
+        width: 70%;
+        .header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            svg {
+                font-size: 25px;
+            }
+            h1 {
+                margin-left: 10px;
+            }
+            .clear {
+                margin-left: auto;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                cursor: pointer;
+                &:hover {
+                    svg {
+                        color: #fe5f1e;
+                    }
+                }
+                svg {
+                    color: #b6b6b6;
+                    font-size: 16px;
+                    transition: color 0.2s ease-in-out;
+                }
+                p {
+                    margin-left: 10px;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #b6b6b6;
+                }
+            }
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            li {
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                border-bottom: 1px solid #f4f4f4;
+                padding: 20px 0;
+                .leftBlock {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    img {
+                        max-width: 100px;
+                        height: auto;
+                    }
+                    .pizzaInfo {
+                        margin-left: 10px;
+                        p {
+                            color: #8d8d8d;
+                        }
+                    }
+                }
+                .rightBlock {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    .count {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        .minus,
+                        .plus {
+                            width: 32px;
+                            height: 32px;
+                            background: #fff;
+                            border: 2px solid #fe5f1e;
+                            border-radius: 50%;
+                            color: #fe5f1e;
+                            font-weight: 900;
+                            font-size: 13px;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        h3 {
+                            margin: 0 10px;
+                        }
+                    }
+                    .cross {
+                        width: 32px;
+                        height: 32px;
+                        background: #fff;
+                        border: 2px solid #d7d7d7;
+                        border-radius: 50%;
+                        color: #d7d7d7;
+                        font-weight: 900;
+                        font-size: 13px;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+        .orderCount {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            span {
+                font-size: 20px;
+            }
+            h3 {
+                font-weight: 500;
+                span {
+                    font-weight: 700;
+                    color: #fe5f1e;
+                }
+            }
+        }
+        .buttons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            button {
+                height: 50px;
+                cursor: pointer;
+                width: 200px;
+                border-radius: 30px;
+                font-size: 15px;
+            }
+            .btnBack {
+                background: #fff;
+                border: 1px solid #d3d3d3;
+                color: #cacaca;
+                &:hover {
+                    border: 1px solid #fe5f1e;
+                }
+            }
+            .btnPay {
+                background: #fe5f1e;
+                border: 1px solid #fe5f1e;
+                color: #fff;
+                &:hover {
+                    box-shadow: 0px 0px 20px 0px rgba($color: #fe5f1e, $alpha: 1);
+                }
+            }
+        }
+    }
+
+    .line {
+        width: 100%;
+        height: 1px;
+        background-color: #f4f4f4;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+}
