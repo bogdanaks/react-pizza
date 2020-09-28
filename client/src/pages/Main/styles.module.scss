@@ -3,6 +3,7 @@
     .settings {
         display: flex;
         flex-direction: row;
+        margin-top: 25px;
     }
     .pizzas {
         h1 {
@@ -39,25 +40,7 @@
                             justify-content: space-between;
                             margin-bottom: 5px;
                             button {
-                                background-color: #f3f3f3;
-                                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
-                                border-radius: 5px;
-                                border: none;
                                 width: 48%;
-                                height: 30px;
-                                font-weight: 700;
-                                font-size: 13px;
-                                cursor: pointer;
-                                color: #2c2c2c;
-                                &.active {
-                                    background: #fff;
-                                }
-                                &:hover {
-                                    background-color: #fff;
-                                }
-                                &:disabled {
-                                    color: rgba(44, 44, 44, 0.3);
-                                }
                             }
                         }
                         .size {
@@ -66,25 +49,35 @@
                             align-items: center;
                             justify-content: space-between;
                             button {
-                                background-color: #f3f3f3;
-                                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
-                                border-radius: 5px;
-                                border: none;
                                 width: 32%;
-                                height: 30px;
-                                font-weight: 700;
-                                font-size: 13px;
-                                cursor: pointer;
-                                color: #2c2c2c;
-                                &.active {
-                                    background: #fff;
-                                }
-                                &:hover {
-                                    background-color: #fff;
-                                }
-                                &:disabled {
-                                    color: rgba(44, 44, 44, 0.3);
-                                }
+                            }
+                        }
+                        button {
+                            background-color: #f3f3f3;
+                            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+                            border-radius: 5px;
+                            border: none;
+                            height: 30px;
+                            font-weight: 700;
+                            font-size: 13px;
+                            cursor: pointer;
+                            color: #2c2c2c;
+                            &.active {
+                                background: #fff;
+                            }
+
+                            &:disabled {
+                                color: rgba(44, 44, 44, 0.3);
+                                cursor: default;
+                            }
+
+                            &:hover {
+                                background-color: #fff;
+                            }
+
+                            &:hover:disabled {
+                                color: rgba(44, 44, 44, 0.3);
+                                background-color: #f3f3f3;
                             }
                         }
                     }
