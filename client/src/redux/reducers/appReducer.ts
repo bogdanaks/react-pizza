@@ -1,5 +1,5 @@
 import produce, { Draft } from 'immer'
-import { APP } from '../types/appTypes'
+import { AppTypes } from '../types/appTypes'
 
 interface AppState {
     app: Boolean
@@ -11,10 +11,10 @@ const initialState: AppState = {
 
 export const appReducer = produce((draft: Draft<AppState>, action) => {
     switch (action.type) {
-        case APP.SHOW_ALERT:
+        case AppTypes.SHOW_ALERT:
             draft.app = false
             break
-        case APP.HIDE_ALERT:
+        case AppTypes.HIDE_ALERT:
             draft.app = true
             break
     }
