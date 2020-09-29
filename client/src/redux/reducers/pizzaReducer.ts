@@ -1,9 +1,5 @@
 import produce, { Draft } from 'immer'
-import { PIZZA, PizzaActionTypes } from '../types/pizzaTypes'
-
-interface PizzaState {
-    pizzas: Array<object>
-}
+import { PizzaState, PIZZA, PizzaActionTypes } from '../types/pizzaTypes'
 
 const initialState: PizzaState = {
     pizzas: [],
