@@ -8,6 +8,7 @@ export enum PizzaTypes {
 
 // initialState
 export interface PizzaItem {
+    _id: string
     title: string
 }
 export interface PizzaState {
