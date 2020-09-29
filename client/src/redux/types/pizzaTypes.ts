@@ -1,17 +1,31 @@
+import { Action } from 'redux'
+import { ThunkAction } from 'redux-thunk'
+
 // enums
-export enum PIZZA {
+export enum PizzaTypes {
     FETCH_PIZZAS = 'PIZZA/FETCH_PIZZAS',
 }
 
 // initialState
-export interface PizzaState {
-    pizzas: Array<object>
+export interface PizzaItem {
+    title: string
 }
+export interface PizzaState {
+    pizzas: PizzaItem[]
+}
+
+//thunk type
+export type PizzaThunk<ReturnType = void> = ThunkAction<
+    ReturnType,
+    PizzaState,
+    unknown,
+    Action<string>
+>
 
 // actions
 interface FetchPizzaAction {
-    type: typeof PIZZA.FETCH_PIZZAS
-    payload: Array<object>
+    type: typeof PizzaTypes.FETCH_PIZZAS
+    payload: PizzaItem[]
 }
 
 export type PizzaActionTypes = FetchPizzaAction
