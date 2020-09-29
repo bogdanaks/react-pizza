@@ -29,8 +29,8 @@ export const Main: React.FC = () => {
                 <h1>Все</h1>
                 <div className={styles.pizzasList}>
                     <ul>
-                        {pizzas.map((item, index) => (
-                            <Pizza key={index} pizza={item} />
+                        {pizzas.map((item) => (
+                            <Pizza key={item._id} pizza={item} />
                         ))}
                     </ul>
                 </div>
