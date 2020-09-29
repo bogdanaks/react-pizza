@@ -1,5 +1,5 @@
 import produce, { Draft } from 'immer'
-import { PIZZA, PizzaActionTypes } from '../actions/pizzaAction/types'
+import { PIZZA, PizzaActionTypes } from '../types/pizzaTypes'
 
 interface PizzaState {
     pizzas: Array<object>

@@ -1,5 +1,5 @@
 import produce, { Draft } from 'immer'
-import { APP } from '../actions/appAction/types'
+import { APP } from '../types/appTypes'
 
 interface AppState {
     app: Boolean
