@@ -14,6 +14,7 @@ import { RootState } from '../../redux/types/rootTypes'
 export const Main: React.FC = () => {
     const dispatch = useDispatch()
     const pizzas = useSelector((state: RootState) => state.pizza.pizzas)
+    const active = useSelector((state: RootState) => state.pizza.category.active)
 
     React.useEffect(() => {
         dispatch(fetchPizzas())
@@ -26,12 +27,17 @@ export const Main: React.FC = () => {
                 <Filters />
             </div>
             <div className={styles.pizzas}>
-                <h1>Все</h1>
+                <h1>{active === '' ? 'Все' : active}</h1>
                 <div className={styles.pizzasList}>
                     <ul>
-                        {pizzas.map((item) => (
-                            <Pizza key={item._id} pizza={item} />
-                        ))}
+                        {pizzas.map((item) => {
+                            if (active === '') {
+                                return <Pizza key={item._id} pizza={item} />
+                            } else {
+                                if (item.category.includes(active))
+                                    return <Pizza key={item._id} pizza={item} />
+                            }
+                        })}
                     </ul>
                 </div>
             </div>
