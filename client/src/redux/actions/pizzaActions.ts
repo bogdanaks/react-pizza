@@ -16,9 +16,9 @@ export const fetchCategories = (): PizzaThunk => {
     }
 }
 
-export const setCategory = (_id: string) => {
+export const setCategory = (name: string) => {
     return {
         type: PizzaTypes.SET_CATEGORY,
-        payload: _id,
+        payload: name,
     }
 }
