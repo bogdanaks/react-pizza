@@ -7,3 +7,18 @@ export const fetchPizzas = (): PizzaThunk => {
         dispatch({ type: PizzaTypes.FETCH_PIZZAS, payload: data })
     }
 }
+
+// Category actions
+export const fetchCategories = (): PizzaThunk => {
+    return async (dispatch) => {
+        const { data } = await api.get('/api/category')
+        dispatch({ type: PizzaTypes.FETCH_CATEGORY, payload: data })
+    }
+}
+
+export const setCategory = (_id: string) => {
+    return {
+        type: PizzaTypes.SET_CATEGORY,
+        payload: _id,
+    }
+}
