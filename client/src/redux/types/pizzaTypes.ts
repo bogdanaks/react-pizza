@@ -12,6 +12,7 @@ export enum PizzaTypes {
 export interface PizzaItem {
     _id: string
     title: string
+    category: string[]
 }
 export interface CategoryItem {
     _id: string
