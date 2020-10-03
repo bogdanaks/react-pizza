@@ -14,6 +14,7 @@ app.use(express.json())
 //routes
 app.use('/api/pizza', require('./routes/api/pizza.routes'))
 app.use('/api/category', require('./routes/api/category.routes'))
+app.use('/api/settings', require('./routes/api/settings.routes'))
 
 //start server
 async function start() {
